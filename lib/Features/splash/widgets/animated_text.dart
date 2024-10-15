@@ -1,4 +1,4 @@
-import 'package:bookly/Features/splash/view_models/widgets/splash_view_body.dart';
+import 'package:bookly/Features/splash/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedText extends StatelessWidget {
