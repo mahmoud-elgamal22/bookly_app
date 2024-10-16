@@ -13,65 +13,75 @@ class BookDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0),
-      child: Column(
-        children: <Widget>[
-          const CustomDetailsAppBar(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            child: const CustomBookImage(),
-          ),
-          const SizedBox(
-            height: 40.0,
-          ),
-          const Text(
-            'The Jungle Book',
-            style: Styles.textStyle30,
-          ),
-          const SizedBox(
-            height: 3,
-          ),
-          Opacity(
-            opacity: 0.7,
-            child: Text(
-              'Rudyard Kipling',
-              style: Styles.textStyle16.copyWith(
-                fontFamily: kGtSectraFine,
-              ),
+    return CustomScrollView(
+      
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: Column(
+              children: <Widget>[
+                const CustomDetailsAppBar(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+                  child: const CustomBookImage(),
+                ),
+                const SizedBox(
+                  height: 40.0,
+                ),
+                const Text(
+                  'The Jungle Book',
+                  style: Styles.textStyle30,
+                ),
+                const SizedBox(
+                  height: 3,
+                ),
+                Opacity(
+                  opacity: 0.7,
+                  child: Text(
+                    'Rudyard Kipling',
+                    style: Styles.textStyle16.copyWith(
+                      fontFamily: kGtSectraFine,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const BookRating(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                ),
+                const SizedBox(
+                  height: 37,
+                ),
+                const BooksActionButton(),
+                const Expanded(
+                  child: SizedBox(
+                    height: 50,
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Text(
+                    'You can also like',
+                    style: Styles.textStyle14.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const SimilarBooksListView(),
+                const SizedBox(
+                  height: 15,
+                ),
+              ],
             ),
           ),
-          const SizedBox(
-            height: 15,
-          ),
-          const BookRating(
-            mainAxisAlignment: MainAxisAlignment.center,
-          ),
-          const SizedBox(
-            height: 37,
-          ),
-          const BooksActionButton(),
-          const SizedBox(
-            height: 50,
-          ),
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: Text(
-              'You can also like',
-              style: Styles.textStyle14.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          const SimilarBooksListView(),
-          const SizedBox(
-            height: 15,
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
