@@ -13,8 +13,12 @@ class AnimatedText extends StatelessWidget {
       builder: (context, _) {
         return SlideTransition(
           position: animation,
-          child: const Text(
+          child:  const Text(
             "Read your favorite books",
+            style: TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+            ),
             textAlign: TextAlign.center,
           ),
         );
