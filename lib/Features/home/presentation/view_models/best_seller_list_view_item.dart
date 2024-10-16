@@ -1,7 +1,6 @@
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -83,7 +82,7 @@ class BookRating extends StatelessWidget {
     return Row(
       children: [
         const Icon(
-          FontAwesomeIcons.solidStar,
+          Icons.star,
           color: Color(0xffFFDD4F),
         ),
         const SizedBox(
