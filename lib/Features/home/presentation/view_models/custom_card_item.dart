@@ -16,7 +16,7 @@ class CustomBookImage extends StatelessWidget {
             ),
             fit: BoxFit.fill,
           ),
-          color:kPrimaryColor ,
+          color: kPrimaryColor,
           borderRadius: BorderRadius.circular(16),
         ),
       ),

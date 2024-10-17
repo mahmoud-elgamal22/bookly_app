@@ -1,8 +1,8 @@
 import 'package:bookly/Features/home/presentation/view_models/best_seller_list_view_item.dart';
 import 'package:bookly/Features/home/presentation/view_models/custom_card_item.dart';
-import 'package:bookly/Features/home/widgets/books_action_button.dart';
-import 'package:bookly/Features/home/widgets/custom_book_details_appbar.dart';
-import 'package:bookly/Features/home/widgets/custom_books_images.dart';
+import 'package:bookly/Features/home/presentation/widgets/books_action_button.dart';
+import 'package:bookly/Features/home/presentation/widgets/custom_book_details_appbar.dart';
+import 'package:bookly/Features/home/presentation/widgets/custom_books_images.dart';
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,6 @@ class BookDetailsViewBody extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
 
     return CustomScrollView(
-      
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
